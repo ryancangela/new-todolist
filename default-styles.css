@@ -238,8 +238,9 @@ input:checked + .slider:before {
   }
   .todo-list {
     width: 86%;
-    display: none;
+    border-radius: 22px;
   }
+
   .theme-toggle {
     position: absolute;
     right: 70px;
