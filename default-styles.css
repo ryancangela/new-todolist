@@ -73,13 +73,6 @@ h2 {
 
 .todo-list {
   width: 72%;
-  /* width: 72%;
-  min-height: 60px;
-  background-color: #0c162430;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
-  transition: 750ms; */
 }
 #outputList.todo-list {
   margin-left: auto;
