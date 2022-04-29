@@ -39,3 +39,8 @@ body.light-mode {
   color: #fff;
   transition: 750ms;
 }
+
+.todo-list {
+  background-color: #241a0c30;
+  transition: 750ms;
+}
