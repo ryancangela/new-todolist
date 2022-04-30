@@ -37,14 +37,12 @@
     <link rel="stylesheet preload"
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Rubik:wght@400;500;600;700&display=swap">
     <link rel="stylesheet preload" href="default-styles.css">
-    <script src="./scripts.js"></script>
-
 </head>
 
 <body id="theme" class="dark-mode">
     <div id="toggle-icon"></div>
     <div class="theme-toggle">
-        <label class="switch">
+        <label class="switch" alt="Theming">
             <input type="checkbox" id="toggle" onclick="toggleTheme()">
             <span class="slider"></span>
         </label>
@@ -57,7 +55,7 @@
         <div class="form-wrapper">
 
             <div id="form">
-                <input type="text" id="todo-input" alt="" value="" placeholder="Add your task here"
+                <input type="text" id="todo-input" alt="Enter your tasks" placeholder="Add your task here"
                     class="testing-submit">
                 <button id="submit" onclick="inputValue(),  addAnimation();">Add Task</button>
                 <div class="todo-wrapper">
@@ -68,6 +66,7 @@
                 </div>
             </div>
         </div>
+        <script src="./scripts.js"></script>
 </body>
 
 </html>
