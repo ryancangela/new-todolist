@@ -74,6 +74,7 @@ h2 {
 
 .todo-list {
   width: 100%;
+  opacity: 1;
 }
 #outputList.todo-list {
   margin-left: auto;
@@ -195,6 +196,11 @@ input:checked + .slider:before {
   filter: drop-shadow(0 0 8px #1f3a60);
 }
 
+.animate__fadeIn,
+.animate__fadeOut {
+  z-index: 2;
+}
+
 /* mobile styles */
 @media only screen and (max-width: 600px) {
   body {
@@ -218,6 +224,7 @@ input:checked + .slider:before {
   #todo-input {
     width: 76%;
     margin-bottom: 14px;
+    z-index: 9;
   }
   #submit {
     width: 88%;
@@ -225,6 +232,7 @@ input:checked + .slider:before {
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
+    z-index: 9;
   }
   #toggle-icon {
     position: absolute;
@@ -233,7 +241,6 @@ input:checked + .slider:before {
     background-image: url(assets/dark-mode-icon.png);
     height: 100px;
     background-size: contain;
-    z-index: 99999;
     background-repeat: no-repeat;
     height: 25px;
     width: 25px;

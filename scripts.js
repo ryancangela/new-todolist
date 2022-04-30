@@ -17,6 +17,8 @@
 // To Do List - Adding & removing tasks
 function inputValue() {
   const task = document.createElement("p");
+  task.classList.add("closeX");
+  // task.setAttribute("id", "testingid");
   const inputValue = document.getElementById("todo-input").value;
   const t = document.createTextNode(inputValue);
   task.appendChild(t);
@@ -32,10 +34,21 @@ function inputValue() {
   span.className = "close";
   span.appendChild(txt);
   task.appendChild(span);
+  span.addEventListener("click", function () {
+    document.getElementById("closeX").add("animate__fadeOut");
+    // delete the column here
+  });
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function () {
       let div = this.parentElement;
+      div.classList.remove("animate__fadeIn"); // reset animation
+      void div.offsetWidth; // trigger reflow
+      // div.classList.add("animate__fadeIn");
+      // start animation
+
+      document.getElementById("outputList").classList.remove(`animate__fadeIn`);
+
       div.style.display = "none";
     };
   }
@@ -45,6 +58,14 @@ let i;
 for (i = 0; i < close.length; i++) {
   close[i].onclick = function () {
     let div = this.parentElement;
+    div.tag;
+    div.document.getElementById;
     div.style.display = "none";
   };
+}
+
+function addAnimation() {
+  document
+    .getElementById("outputList")
+    .classList.add(`animate__animated`, `animate__fadeIn`);
 }
