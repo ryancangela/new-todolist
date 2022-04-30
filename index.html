@@ -55,18 +55,19 @@
         <div class="form-wrapper">
 
             <div id="form">
-                <input type="text" id="todo-input" alt="Enter your tasks" placeholder="Add your task here"
-                    class="testing-submit">
-                <button id="submit" onclick="inputValue(),  addAnimation();">Add Task</button>
-                <div class="todo-wrapper">
-                    <div class="todo-list " id="outputList">
-                        <!--<p class="list-task" value="Bake up some pizza in the brick stove" id="output"></p>-->
-                        </label>
-                    </div>
-                </div>
+                <label class="added-todo" alt="Form Field for input">
+                    <input type="text" id="todo-input" alt="Enter your tasks" placeholder="Add your task here"
+                        class="testing-submit">
+                    <button id="submit" onclick="inputValue(), addAnimation(), addFadeaway();">Add Task</button>
+                    <div class="todo-wrapper">
+                        <div class="todo-list " id="outputList">
+                            <!--<p class="list-task" value="Bake up some pizza in the brick stove" id="output"></p>-->
+                </label>
             </div>
         </div>
-        <script src="./scripts.js"></script>
+    </div>
+    </div>
+    <script src="./scripts.js"></script>
 </body>
 
 </html>

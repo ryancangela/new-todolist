@@ -36,19 +36,20 @@ function inputValue() {
   task.appendChild(span);
   span.addEventListener("click", function () {
     document.getElementById("closeX").add("animate__fadeOut");
-    // delete the column here
   });
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function () {
       let div = this.parentElement;
       div.classList.remove("animate__fadeIn"); // reset animation
-      void div.offsetWidth; // trigger reflow
-      // div.classList.add("animate__fadeIn");
-      // start animation
+      void div.offsetWidth;
 
-      document.getElementById("outputList").classList.remove(`animate__fadeIn`);
-
+      // document.getElementById(`outputList`).classList.remove(`animate__fadeIn`);
+      // setTimeout(() => {
+      //   document
+      //     .getElementById(`outputList`)
+      //     .classList.add(`animate__fadeOutUp`);
+      // }, 4000);
       div.style.display = "none";
     };
   }
@@ -98,4 +99,8 @@ function toggleTheme() {
 
   document.getElementById("toggle-icon").classList.toggle("dark-mode");
   document.getElementById("toggle-icon").classList.toggle("light-mode");
+}
+
+function addFadeaway() {
+  document.getElementsByTagName("SPAN");
 }

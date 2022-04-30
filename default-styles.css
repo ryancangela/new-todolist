@@ -175,6 +175,7 @@ p.todo-list [style*="visible"] + .todo-list {
   margin: 20px auto 0 auto;
   transition: 750ms;
   border-radius: 10px;
+  max-width: 320px;
 }
 
 span.close {
