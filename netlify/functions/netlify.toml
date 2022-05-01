@@ -19,3 +19,5 @@
 [build.environment]
   MY_BASE_TOKEN = ""
   SECRET_API_KEY = ""
+[functions]
+  node_bundler = "esbuild"
