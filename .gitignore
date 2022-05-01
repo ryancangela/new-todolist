@@ -1,0 +1,9 @@
+node_modules
+/.nyc_output/
+/coverage/
+/lib/
+.DS_Store
+.vscode
+.idea
+/config files/
+config.js
