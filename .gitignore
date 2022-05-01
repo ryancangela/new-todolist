@@ -6,4 +6,3 @@ node_modules
 .vscode
 .idea
 /config files/
-config.js
