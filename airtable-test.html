@@ -2,6 +2,11 @@
 <html>
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet preload"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Rubik:wght@400;500;600;700&display=swap"
+        as="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.2.min.js"></script>
     <!-- <script type='text/javascript' src='netlify/functions/config.js'></script> -->
     <script type='text/javascript' src='config.js'></script>
@@ -58,9 +63,31 @@
             padding: 15px;
         }
 
+        .recordWrapper {
+            background-color: #fff;
+            filter: drop-shadow(2px 6px 10px #00000040);
+            border-radius: 20px;
+        }
+
         #artists img {
-            width: 300px;
+            object-fit: cover;
             height: auto;
+            max-width: 100%;
+            border-radius: 12px;
+        }
+
+        h3.artist-name {
+            color: darkslategrey;
+            font-size: calc(1rem + 20px);
+            font-weight: 600;
+            font-family: "Rubik", sans-serif;
+        }
+
+        p.artist-bio {
+            color: black;
+            font-size: calc(1rem - 2px);
+            font-weight: 500;
+            font-family: "Montserrat", sans-serif;
         }
     </style>
 
@@ -113,17 +140,18 @@
                 // grab image url for src insert
                 var $imageurl = record.get('images');
                 var $artistInfo = $('<div class="recordWrapper">');
-
-                $artistInfo.append($('<h3>').text(record.get('Name')));
-                $artistInfo.append($('<div>').text(record.get('Bio')));
                 $artistInfo.append($('<img>').attr("src", $imageurl));
+                $artistInfo.append($('<h3 class="artist-name">').text(record.get('Name')));
+                $artistInfo.append($('<p class="artist-bio">').text(record.get('Bio')));
+                $artistInfo.append($('<p class="artist-collection">').text(record.get('Collection')));
+
 
                 // img.src = "/images/img1.gif";
                 // $('#image').html(img);
 
                 // $artistInfo.prepend('<img id="profileimage" src="theImg.png" />')
 
-                var x = $('<button>').text('Delete').click(function () {
+                var x = $('<button style="display: none">').text('Delete').click(function () {
                     deleteArtist(record);
                 });
                 $artistInfo.append(x)
