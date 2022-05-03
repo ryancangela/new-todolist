@@ -1,3 +1,9 @@
+body {
+  background-color: #0c1624;
+  margin: auto;
+  transition: 750ms;
+  margin-top: 8vh;
+}
 .character-list {
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -31,7 +37,7 @@
   flex: 0 1 auto;
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
-  align-self: auto;
+  align-self: flex-start;
   width: 500px;
 }
 
@@ -82,12 +88,28 @@
   height: 250px;
   border-radius: 12px;
 }
-p.characer-name {
+p.character-name {
   font-size: 1.5rem;
-  line-height: 1.25em;
+  line-height: 1.5em;
   font-family: "Rubik", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
 }
 
+.character-gender,
+.status,
+.species,
+.subspecies,
+.origin,
+#timeCreated {
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  font-weight: 400;
+}
+span.titles {
+  font-weight: 700;
+}
 .Dead {
   opacity: 0.45;
 }
