@@ -1,5 +1,9 @@
 {
   "devDependencies": {
     "netlify-cli": "^10.1.0"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "rickmortyapi": "^1.0.0"
   }
 }
